@@ -1,4 +1,4 @@
-package com.thatoneperson.forgeorigins;
+package com.thatoneperson.forgeorigin;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -28,12 +28,6 @@ public class ForgeOrigins
     public ForgeOrigins() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
